@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Liste de livres</title>
+        <style>
+            /* Style pour la mise en forme de la grille */
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+                align-items: start;
+            }
+
+            .grid-header {
+                font-weight: bold;
+                background-color: #f2f2f2;
+                padding: 8px;
+                border: 1px solid #ddd;
+            }
+
+            .grid-item {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            ul {
+                list-style-type: none;
+            }
+
+            .add-button {
+                background-color: #22bb33;
+                color: #FFFFFF;
+                padding: 5px 10px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .edit-button {
+                background-color: #0074D9;
+                color: #FFFFFF;
+                padding: 5px 10px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .grid-header span {
+                text-align: right;
+            }
+
+            .grid-footer {
+                background-color: #f2f2f2;
+                padding: 8px;
+                border: 1px solid #ddd;
+            }
+
+            .grid-footer:first-child {
+                background-color: unset !important;
+                border: none !important;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Liste de livres</h1>
+        <ul id="book-list" class="grid-container">
+            <li class="grid-header">ISBN</li>
+            <li class="grid-header">Titre</li>
+            <li class="grid-header">Date</li>
+            <li class="grid-header">Actions</li>
+        </ul>
+        <form id="addBookForm">
+            <ul class="grid-container">
+                <li class="grid-footer"></li>
+                <li class="grid-footer">
+                    <input type="text" id="title" name="titre" placeholder="saisir un titre">
+                </li>
+                <li class="grid-footer">
+                    <input type="date" id="date" name="date">
+                </li>
+
+                <li class="grid-footer">
+                    <button type="submit" class="add-button">Ajouter</button>
+                </li>
+            </ul>
+        </form>
+            <h1> Formulaire de mise à jour du livre </h1>
+            <ul id="book-item" class="grid-container"></ul>
+
+           <!-- <form id="update-form">
+                <ul class="grid-container">
+                    <li class="grid-footer"></li>
+                    <li class="grid-footer">
+                        <input type="text" id="title" name="titre" placeholder="saisir un titre">
+                    </li>
+                    <li class="grid-footer">
+                        <input type="date" id="date" name="date">
+                    </li>
+    
+                    <li class="grid-footer">
+                        <button type="submit" class="edit-button">Modifier</button>
+                    </li>
+                </ul>
+            </form>-->
+        
+        <script src="js/books.js"></script>
+        
+    </body>
+</html>

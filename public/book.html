@@ -1,0 +1,19 @@
+    <form id="update-form" action="" method="POST">
+         <!-- indication for Slim that this should be interpreted as a PUT request  -->
+            --<input type="hidden" name="_METHOD" value="PATCH" />
+            <ul class="grid-container">
+                <li class="grid-item" id="isbn"></li>
+                <li class="grid-item">
+                    <input type="text" id="title" name="titre" placeholder="modifier le titre">
+                </li>
+                <li class="grid-item">
+                    <input type="date" id="date" name="date">
+                </li>
+
+                <li class="grid-item">                 
+                    <button type="submit" class="edit-button">Modifier</button>
+                </li>
+            </ul>
+    </form>   
+    
+    

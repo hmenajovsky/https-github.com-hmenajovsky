@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon POC</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h1>Ceci est un POC du projet Enera</h1>
+    <form action="/livres/{id}" method="PATCH">
+        <!-- Remplacez {id} par l'ID du livre que vous souhaitez mettre à jour -->
+        <label for="titre">Titre :</label>
+        <input type="text" id="titre" name="titre" required>
+        <br>
+        <label for="date">Date :</label>
+        <input type="date" id="date" name="date" required>
+        <br>
+        <button type="submit">Mettre à jour</button>
+    </form>
+
+    <h1>Liste de livres</h1>
+
+    <ul id="book-list" class="grid-container">
+
+    </ul>
+    <form id="addBookForm">
+        <ul class="grid-container">
+            <li class="grid-footer"></li>
+            <li class="grid-footer">
+                <input type="text" id="title" name="titre" placeholder="saisir un titre">
+            </li>
+            <li class="grid-footer">
+                <input type="date" id="date" name="date">
+            </li>
+
+            <li class="grid-footer">
+                <button type="submit" class="add-button">Ajouter</button>
+            </li>
+        </ul>
+    </form>
+    <h1> Formulaire de mise à jour du livre </h1>
+    <form id="update-form" action="" method="POST">
+        <input type="hidden" name="_METHOD" value="PATCH" />
+        <ul id="book-item" class="grid-container"></ul>
+    </form>
+
+
+
+
+    <script src="js/poc.js"></script>
+</body>
+
+</html>

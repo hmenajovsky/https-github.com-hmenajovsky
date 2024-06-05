@@ -1,0 +1,56 @@
+/* Style pour la mise en forme de la grille */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    align-items: start;
+}
+
+.grid-header {
+    font-weight: bold;
+    background-color: #f2f2f2;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+.grid-item {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.add-button {
+    background-color: #22bb33;
+    color: #FFFFFF;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-button {
+    background-color: #0074D9;
+    color: #FFFFFF;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.grid-header span {
+    text-align: right;
+}
+
+.grid-footer {
+    background-color: #f2f2f2;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+.grid-footer:first-child {
+    background-color: unset !important;
+    border: none !important;
+}
